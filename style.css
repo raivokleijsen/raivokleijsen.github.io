@@ -1,0 +1,137 @@
+:root {
+    --background: #d9def5;
+    --background-secondary: #b6c0eb;
+    --background-tertiary: #ccd3f1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    background: var(--background);
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    text-align: justify;
+    font-weight: 500;
+    padding: 0 2rem;
+}
+
+.container h1,
+.container h2,
+.container h3,
+.container h4,
+.container h5,
+.container h6 {
+    text-align: center;
+    margin: 1rem;
+}
+
+.banner {
+    width: 100%;
+    height: 1000px;
+    background: black;
+    position: relative;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+}
+
+.banner > img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 110%;
+    object-fit: contain;
+}
+
+.banner .banner-overlay {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 60%);
+}
+
+.banner .container {
+    color: white;
+    position: relative;
+    z-index: 20;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.banner h1 {
+    font-size: 2.5rem;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+section {
+    padding: 2rem 0;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.25);
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+.agenda-table {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+@media only screen and (max-width: 640px) {
+    .agenda-table {
+        grid-template-columns: 1fr;
+    }
+}
+
+.agenda-table li {
+    font-size: 1.1rem;
+    background: var(--background-secondary);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    height: fit-content;
+}
+
+.agenda-table li .list-title {
+    display: inline-block;
+    font-weight: bold;
+    padding: 1rem 1.5rem;
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1rem;
+    text-align: left;
+    cursor: pointer;
+}
+
+.agenda-table li .list-content {
+    background: var(--background-tertiary);
+    padding: 1rem 1.5rem;
+    display: none;
+}
+
+.agenda-table li .list-content.show {
+    display: block;
+}
