@@ -9,6 +9,7 @@
     margin: 0;
     padding: 0;
     box-sizing: content-box;
+    
 }
 
 body {
@@ -198,4 +199,14 @@ section:last-child {
     height: 2rem;
 }
 
+.Disclaimer {
+    font-size: small;
+    margin: 5vh;
+    font-style: italic;
+}
+
+a{
+    text-decoration: none;
+    color: red;
+}
 /** bruh**/
