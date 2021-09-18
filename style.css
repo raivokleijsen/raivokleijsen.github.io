@@ -221,6 +221,7 @@ section:last-child {
 
 .disclaimer {
     font-size: 0.9rem;
-    margin-top: 2rem;
+    margin: 2rem 2rem 0 2rem;
     font-style: italic;
+    text-align: center;
 }
