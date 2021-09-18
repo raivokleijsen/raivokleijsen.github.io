@@ -8,8 +8,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: content-box;
-    
+    box-sizing: border-box;
 }
 
 body {
@@ -21,9 +20,17 @@ body {
 .container {
     max-width: 1024px;
     margin: 0 auto;
-    text-align: justify;
+    text-align: left;
     font-weight: 500;
     padding: 0 2rem;
+}
+
+.container p {
+    margin-bottom: 1rem;
+}
+
+.container p:last-child {
+    margin-bottom: 0;
 }
 
 .container h1,
@@ -34,6 +41,11 @@ body {
 .container h6 {
     text-align: center;
     margin: 1rem;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
 }
 
 .banner {
@@ -110,7 +122,6 @@ section:last-child {
 
 .agenda-table li {
     font-size: 1.1rem;
-    background: var(--background-secondary);
     border-radius: 0.75rem;
     overflow: hidden;
     height: fit-content;
@@ -126,8 +137,14 @@ section:last-child {
     width: 100%;
     font-family: "Montserrat", sans-serif;
     font-size: 1.1rem;
-    text-align: left;
+    text-align: center;
     cursor: pointer;
+    transition: filter 150ms ease-out;
+    background: var(--background-secondary);
+}
+
+.agenda-table li .list-title:hover {
+    filter: brightness(1.05);
 }
 
 .agenda-table li .list-content {
@@ -194,19 +211,16 @@ section:last-child {
     justify-content: center;
     gap: 0.5rem;
 }
+.instagram a {
+    color: black;
+}
 
 .instagram > img {
     height: 2rem;
 }
 
-.Disclaimer {
-    font-size: small;
-    margin: 5vh;
+.disclaimer {
+    font-size: 0.9rem;
+    margin-top: 2rem;
     font-style: italic;
 }
-
-a{
-    text-decoration: none;
-    color: red;
-}
-/** bruh**/
